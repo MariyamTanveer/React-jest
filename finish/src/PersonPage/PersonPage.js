@@ -21,12 +21,16 @@ export function PersonPage({ id }) {
   }, [id]);
 
   if (loading) {
-    return <p>Loading ...</p>;
+    return (
+      <>
+        <p>Loading ...</p>
+        <p>Loading ...</p>
+      </>
+    );
   }
 
   return (
     <div className="person-page">
-      <h3>{person.firstName + " " + person.lastName}</h3>
       <h3>{person.firstName + " " + person.lastName}</h3>
       <a href={`mailto:${person.email}`}>Email: {person.email}</a>
       <ul>
